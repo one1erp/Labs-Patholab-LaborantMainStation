@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LaborantMainStation", "LaborantMainStation.csproj", "{6EEF942D-9723-44F7-BD08-DD34F3D9AEAD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Patholab_DAL_V1", "..\..\Patholab_DAL_V1\Patholab_DAL_V1\Patholab_DAL_V1.csproj", "{654B85EA-0ADD-42AD-AA0A-FAE4CB001F97}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6EEF942D-9723-44F7-BD08-DD34F3D9AEAD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6EEF942D-9723-44F7-BD08-DD34F3D9AEAD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6EEF942D-9723-44F7-BD08-DD34F3D9AEAD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6EEF942D-9723-44F7-BD08-DD34F3D9AEAD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{654B85EA-0ADD-42AD-AA0A-FAE4CB001F97}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{654B85EA-0ADD-42AD-AA0A-FAE4CB001F97}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{654B85EA-0ADD-42AD-AA0A-FAE4CB001F97}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{654B85EA-0ADD-42AD-AA0A-FAE4CB001F97}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

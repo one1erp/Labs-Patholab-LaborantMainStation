@@ -1,0 +1,192 @@
+﻿<Window x:Class="LaborantMainStation.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="עמדת רישום לבורנטים" WindowState="Maximized" BorderBrush="LightSkyBlue" FlowDirection="RightToLeft">
+    <Window.Resources>
+        <Style TargetType="Label">
+            <Setter Property="FontSize" Value="20"></Setter>
+            <Setter Property="HorizontalAlignment" Value="Center"></Setter>
+            <Setter Property="FontWeight" Value="Bold"></Setter>
+        </Style>
+        <!--
+        <Style TargetType="TextBlock" x:key="no2"   >
+            <Setter Property="FontSize" Value="20"></Setter>
+            <Setter Property="Height" Value="40"></Setter>
+        </Style>
+        <Style TargetType="TextBox" x:key="no3">
+            <Setter Property="FontSize" Value="20"></Setter>
+            <Setter Property="Height" Value="40"></Setter>
+            <Setter Property="Background" Value="#FF4F97F5"/>
+        </Style>-->
+
+        <Style TargetType="CheckBox">
+            <Setter Property="FontWeight" Value="Bold"></Setter>
+
+            <Setter Property="VerticalAlignment" Value="Center"></Setter>
+            <Setter Property="IsThreeState" Value="False"></Setter>
+            <Setter Property="FontSize" Value="20"></Setter>
+        </Style>
+        <!--<Style TargetType="xctk:DateTimePicker">
+            <Setter Property="FontSize" Value="20"></Setter>
+            <Setter Property="FontWeight" Value="Bold"></Setter>
+            <Setter Property="VerticalAlignment" Value="Center"></Setter>
+            <Setter Property="Margin" Value="3"></Setter>
+            <Setter Property="Text" Value=""></Setter>
+            <Setter Property="Format" Value="ShortDate"></Setter>
+        </Style>-->
+        <Style TargetType="ComboBox">
+            <Setter Property="IsEditable" Value="True"></Setter>
+
+            <Setter Property="Margin" Value="3"></Setter>
+            <Setter Property="FontSize" Value="20"></Setter>
+            <Setter Property="IsSynchronizedWithCurrentItem" Value="False"></Setter>
+
+        </Style>
+        <Style TargetType="TextBlock">
+            <Setter Property="FontSize" Value="20"></Setter>
+            <Setter Property="FontWeight" Value="Bold"></Setter>
+            <Setter Property="VerticalAlignment" Value="Center"></Setter>
+                <Setter Property="HorizontalAlignment" Value="Center" />
+            <Setter Property="Margin" Value="3"></Setter>
+        </Style>
+        <Style x:Key="DataGridContentCellCentering" TargetType="{x:Type DataGridCell}">
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type DataGridCell}">
+                        <Grid Background="{TemplateBinding Background}">
+                            <ContentPresenter VerticalAlignment="Center" />
+                        </Grid>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+        <Style TargetType="DatePicker">
+            <Setter Property="FontSize" Value="20"></Setter>
+
+            <Setter Property="FontWeight" Value="Bold"></Setter>
+            <Setter Property="VerticalAlignment" Value="Center"></Setter>
+            <Setter Property="Margin" Value="3"></Setter>
+        </Style>
+        <Style TargetType="DataGrid">
+            <Setter Property="FontSize" Value="20"></Setter>
+
+            <Setter Property="FontWeight" Value="Bold"></Setter>
+            <Setter Property="VerticalAlignment" Value="Center"></Setter>
+            <Setter Property="Margin" Value="3"></Setter>
+        </Style>
+        <Style TargetType="RadioButton">
+            <Setter Property="FontWeight" Value="Bold"></Setter>
+            <Setter Property="FontSize" Value="20"></Setter>
+            <Setter Property="Margin" Value="3"></Setter>
+            <Setter Property="IsThreeState" Value="False"></Setter>
+        </Style>
+       <Style TargetType="Grid" x:Key="innerGrid">
+            <Setter Property="Background" Value="Lavender"></Setter>
+            <Setter Property="Margin" Value="4"></Setter>
+        </Style>
+        <Style   TargetType="Button" >
+            <Setter Property="Margin" Value="0,50,0,50"></Setter>
+            <Setter Property="MaxWidth" Value="126"></Setter>
+            <Setter Property="FontSize" Value="20"></Setter>
+            <Setter Property="FontWeight" Value="Bold"></Setter>
+        </Style>
+        <Style   TargetType="Button"  x:Key="dg" >
+            <Setter Property="Margin" Value="0,10,0,10"></Setter>
+            <Setter Property="MaxWidth" Value="126"></Setter>
+            <Setter Property="FontSize" Value="20"></Setter>
+            <Setter Property="FontWeight" Value="Bold"></Setter>
+        </Style>
+        <Style TargetType="Grid" >
+            <Setter Property="Background" Value="Lavender"></Setter>
+            <Setter Property="Margin" Value="6"></Setter>
+            <Setter Property="FlowDirection" Value="RightToLeft"></Setter>
+        </Style>
+
+        <Style TargetType="ScrollViewer" >
+
+            <Setter Property="FlowDirection" Value="LeftToRight"></Setter>
+        </Style>
+        <!--<Style TargetType="Button">
+            <Setter Property="FontSize" Value="20"></Setter>
+            <Setter Property="Height" Value="35"></Setter>
+            <Setter Property="Background" Value="LightSteelBlue"/>
+            <Setter Property="Width" Value="150"/>
+            <Setter Property="VerticalAlignment" Value="Center"/>
+            <Setter Property="HorizontalAlignment" Value="Center"/>
+            <Setter Property="BorderBrush" Value="Black"/>
+        </Style>-->
+    </Window.Resources>
+    <Grid Name ="MasterGrid" ShowGridLines="False" >
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <!--<RowDefinition Height="Auto"/>-->
+            <RowDefinition />
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <Grid Grid.Row="0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition />
+                <ColumnDefinition />
+            </Grid.ColumnDefinitions>
+            <Border Grid.Column="0" Grid.Row="0" >
+                <Label VerticalAlignment="Center" Foreground="Black" FontSize="30" FontWeight="Medium">עמדת רישום לבורנטים</Label>
+            </Border>
+            <Border Grid.Column="1" Grid.Row="0"  >
+                <TextBlock HorizontalAlignment="Center"  VerticalAlignment="Top" Foreground="Black" FontSize="30" FontWeight="Medium" Name="dateText" Text="תאריך:" />
+            </Border>
+        </Grid>
+
+        <DataGrid  Grid.Row="1"  x:Name="dg" ItemsSource="{Binding Rows}"
+            ScrollViewer.CanContentScroll="True" 
+            ScrollViewer.VerticalScrollBarVisibility="Auto"
+            ScrollViewer.HorizontalScrollBarVisibility="Auto"
+            VerticalAlignment="Center"
+            HorizontalAlignment="Center"
+            AutoGenerateColumns="False"
+            CanUserAddRows="false"
+            CanUserDeleteRows="False"
+            SelectionMode="Single">
+                <DataGrid.CellStyle>
+                <Style TargetType="DataGridCell" >
+                    <Setter Property="Template">
+                        <Setter.Value>
+                            <ControlTemplate TargetType="{x:Type DataGridCell}">
+                                <Grid Background="{TemplateBinding Background}">
+                                    <ContentPresenter VerticalAlignment="Center"   HorizontalAlignment="Center"/>
+                                    <DataGridCellsPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                </Grid>
+                            </ControlTemplate>
+                        </Setter.Value>
+                    </Setter>
+                </Style>
+                </DataGrid.CellStyle>
+                <DataGrid.Columns>
+                <DataGridTextColumn Binding="{Binding Path=StationName}" Header="עמדה" IsReadOnly="True"  Width="*"/>
+                <DataGridTextColumn Binding="{Binding Path=LaborantWorkerNumber}" Header="מספר לבורנט/ית" Width="*"  />
+                <DataGridTextColumn Binding="{Binding Path=LaborantName}" Header="שם הלבורנט/ית" IsReadOnly="True"  Width="*" />
+                <DataGridTextColumn Binding="{Binding Path=SessionStart}" Header="תאריך/שעה" IsReadOnly="True"  Width="*" />
+                <DataGridTemplateColumn  IsReadOnly="True"  Width="*"  >
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <Button Click="EndSessionClick" Name="EndSessionClick"   Style="{StaticResource dg }"  >סיום עבודה</Button>
+                            
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+            </DataGrid.Columns>
+        </DataGrid>
+        <Grid Name="GridControls"  Grid.Row="2"  VerticalAlignment="Center" ShowGridLines="False"  Margin="0,0,0,0"   >
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <Button  Grid.Column="0"  Name="Refresh" Content="רענן" Click="Refresh_Click"></Button>
+            <Button  Grid.Column="1" Name="ExitButton" Content="יציאה" Click="ExitButton_Click"></Button>
+            <Button  Grid.Column="2" Name="Cancel" Content="ביטול" Click="Cancel_Click"></Button>
+            <Button  Grid.Column="3" Name="Save" Content="שמירה" Click="Save_Click"></Button>
+        </Grid>
+    </Grid>
+
+</Window>
